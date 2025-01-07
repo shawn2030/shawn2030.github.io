@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- MathJax for LaTeX math rendering -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -23,7 +25,7 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="work-experience.html">Work Experience</a>
+                        <a class="nav-link" href="work-experience.html">Work Experience</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="projects.html">Projects</a>
@@ -42,26 +44,39 @@
     <!-- Research Section -->
     <div class="container my-5">
         <h1 class="text-center text-primary mb-4">Research</h1>
+
         <div class="card mb-4 shadow-sm">
             <div class="card-body">
-                <h3 class="card-title">Improving Variational Autoencoders (VAEs)</h3>
-                <p class="card-text">Explored techniques to enhance the performance of VAEs, focusing on improving generative modeling by incorporating methods such as Importance Weighted Autoencoders (IWAE) and Beta-VAE. This work bridges the gap between theoretical understanding and practical implementations of VAEs in diverse domains.</p>
+                <h3 class="card-title">Stochastic Variational AutoEncoders</h3>
+                <p class="card-text">
+                    This thesis explores a novel form of Generative Model inspired by Variational Autoencoders (VAEs). 
+                    The key contribution is a modified recognition model that operates on the principle of stochastic mixtures 
+                    of Gaussians rather than producing a single Gaussian for each input. The study focuses on employing 
+                    Stochastic Neural Networks as the recognition model within a VAE framework.
+                </p>
+                <p>
+                    While traditional VAEs are trained to maximize a lower bound on the log likelihood of the data 
+                    (commonly referred to as the Evidence Lower Bound or ELBO), this research aims to achieve a tighter bound 
+                    by incorporating stochasticity:
+                </p>
+                <p class="text-center">
+                    <span class="math">$$\text{Log Likelihood} \geq \text{ELBO}_{\text{stochastic}} \geq \text{ELBO}_{\text{VAE}}$$</span>
+                </p>
             </div>
         </div>
 
         <div class="card mb-4 shadow-sm">
             <div class="card-body">
-                <h3 class="card-title">Advancing Generative Adversarial Networks (GANs)</h3>
-                <p class="card-text">Researched advanced GAN techniques including Wasserstein GANs, Conditional GANs, and Laplacian Pyramid GANs for generating high-resolution and high-fidelity images. Addressed challenges such as mode collapse and artifacts in generative outputs.</p>
+                <h3 class="card-title">Deep Study of Image Generative Models</h3>
+                <p class="card-text">
+                    Explored techniques to enhance the performance of Variational Autoencoders (VAEs), focusing on improving generative modeling through advanced methods such as Importance Weighted Autoencoders (IWAE) and Beta-VAE. This work bridges the gap between theoretical foundations and practical applications of VAEs across diverse domains.
+                    Researched advanced Generative Adversarial Network (GAN) techniques, including Wasserstein GANs, Conditional GANs, and Laplacian Pyramid GANs, to generate high-resolution and high-fidelity images. Addressed key challenges such as mode collapse and artifacts in generative outputs.
+                    Conducted an in-depth study of Denoising Diffusion Probabilistic Models (DDPMs), delving into their mathematical foundations. Further explored state-of-the-art diffusion techniques, including the Latent Diffusion Model, to advance the field of generative modeling.
+                    Developed a strong foundation in probability theory, emphasizing its application in probabilistic models such as VAEs and DDPMs. This understanding has been instrumental in analyzing uncertainty, optimizing model performance, and interpreting complex generative processes.
+                </p>
             </div>
         </div>
 
-        <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-                <h3 class="card-title">AI in Sports Analytics</h3>
-                <p class="card-text">Developed innovative applications of AI in sports analytics, including a system for offside detection using a single camera. This research focuses on leveraging AI to solve real-world challenges efficiently, reducing hardware dependencies.</p>
-            </div>
-        </div>
     </div>
 
     <!-- Footer -->
